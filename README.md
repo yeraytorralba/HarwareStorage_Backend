@@ -2,15 +2,15 @@
 Backend of application REST , spring-boot + angular 4 with sql , about hardware storage 
 
 
-Docker app bd:
--Se descargan las imagenes a usar
+<h2>Docker app bd:</h2>
+<h4>-Se descargan las imagenes a usar</h4>
 docker pull mysql
 docker pull phpmyadmin
 
--Se crea la red para inteconectar los contenedores sin usar link
+-Se crea la red para inteconectar los contenedores sin usar link<br>
 docker network create redsql --driver bridge
 
--Se crean los contenedores en base a las imagenes y la net
+-Se crean los contenedores en base a las imagenes y la net<br>
 docker container create -p 33060:3306 --network redsql -e MYSQL_ROOT_PASSWORD=1234 --name mysql-db mysql
 docker container create -p 8085:80 --network redsql -e PMA_HOST=mysql-db -e PMA_USER=root -e PMA_PASSWORD=1234 --name phpmyadmin phpmyadmin
 
