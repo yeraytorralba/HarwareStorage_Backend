@@ -18,10 +18,7 @@ public class MakerComponentEntity {
 	private int id;
 
 	private String name;
-	
-	@OneToOne(mappedBy = "core", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private ComponentEntity componentEntity;
-
+ 
 	public MakerComponentEntity() {
 
 	}
