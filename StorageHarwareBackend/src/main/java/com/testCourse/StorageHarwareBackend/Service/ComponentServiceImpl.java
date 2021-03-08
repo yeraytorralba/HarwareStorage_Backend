@@ -7,12 +7,17 @@ import org.springframework.stereotype.Service;
 
 import com.testCourse.StorageHarwareBackend.Entity.ComponentEntity;
 import com.testCourse.StorageHarwareBackend.Repository.ComponentRepository;
+import com.testCourse.StorageHarwareBackend.Repository.ComponentRepositoryStatic;
 
 @Service
 public class ComponentServiceImpl implements ComponentService {
 
 	@Autowired
 	private ComponentRepository componentRepository;
+	
+	@Autowired
+	private ComponentRepositoryStatic componentRepositoryStatic;
+	
 	
 	@Override
 	public List<ComponentEntity> findAll() { 
@@ -44,6 +49,16 @@ public class ComponentServiceImpl implements ComponentService {
 	@Override
 	public boolean existsById(int id) { 
 		return this.componentRepository.existsById(id);
+	}
+
+	@Override
+	public String findOneStatic(Integer id) {
+		return this.componentRepositoryStatic.findOneStatic(id);
+	}
+
+	@Override
+	public String[] findAllStatic() {
+		return this.componentRepositoryStatic.findAllStatic();
 	}
 
 	 

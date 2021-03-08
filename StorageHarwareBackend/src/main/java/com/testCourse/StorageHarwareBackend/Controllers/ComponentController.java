@@ -45,6 +45,23 @@ public class ComponentController {
 		return ResponseEntity.ok(this.componentService.findOne(id));
 
 	} 
+	@GetMapping(path = "/static/{id}")
+	public ResponseEntity<String> componentStaticGetOne(@PathVariable(name= "id") int id) {
+		
+		logger.info("Get Component for id :"+id);
+		
+		return ResponseEntity.ok(this.componentService.findOneStatic(id));
+
+	} 
+	@GetMapping(path = "/static")
+	public ResponseEntity<String[]> componentGetOne() {
+		
+		logger.info("Get Component for static");
+		
+		return ResponseEntity.ok(this.componentService.findAllStatic());
+
+	} 
+	
 	@PostMapping()
 	public  ResponseEntity<ComponentEntity> add( @RequestBody ComponentEntity component) {
 		 	
