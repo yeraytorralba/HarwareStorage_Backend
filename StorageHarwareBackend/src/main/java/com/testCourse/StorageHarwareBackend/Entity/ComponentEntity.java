@@ -2,19 +2,15 @@ package com.testCourse.StorageHarwareBackend.Entity;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "component")
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="component") 
 public class ComponentEntity {
 
 	@Id
@@ -23,21 +19,18 @@ public class ComponentEntity {
 	
 	private String name;
 
-	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "type")
+	@DBRef
 	private TypeComponentEntity type;
 	
 	
 	private int memo;
 	private Date year;
 	
-	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "maker")
+	@DBRef
 	private MakerComponentEntity maker;
 
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "core")
+	@DBRef
 	private CoreComponentEntity core;
 
 	public ComponentEntity() { 

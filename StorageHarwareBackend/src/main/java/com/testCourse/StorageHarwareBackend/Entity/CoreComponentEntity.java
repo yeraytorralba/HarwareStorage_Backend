@@ -1,17 +1,13 @@
 package com.testCourse.StorageHarwareBackend.Entity;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
+ 
+import javax.persistence.Column; 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.Id; 
 
-@Entity
-@Table(name = "core_component")
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="core_component")
 public class CoreComponentEntity {
 
 	@Id

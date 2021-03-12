@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import com.testCourse.StorageHarwareBackend.Entity.ComponentEntity;
 import com.testCourse.StorageHarwareBackend.Entity.CoreComponentEntity;
+import com.testCourse.StorageHarwareBackend.Entity.TypeComponentEntity;
 
 @Repository
-public interface CoreComponentRepository extends MongoRepository<CoreComponentEntity, Integer>{
+public interface TypeComponentRepository extends MongoRepository<TypeComponentEntity, Integer>{
 
 }

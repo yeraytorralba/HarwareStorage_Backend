@@ -9,8 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "maker_component")
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection= "maker_component")
 public class MakerComponentEntity {
 
 	@Id
