@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 public class ComponentRepositoryStaticImpl implements ComponentRepositoryStatic{
 
 	
-	private String[] almacenStatico = {"grafica","procesador","ssd","placa base","refrigeracion"};
+	private String[] almacenStatico = {"grafica","procesador","ssd","placa base","refrigeracion"}; 
 	
 	
 	@Override
@@ -15,7 +15,7 @@ public class ComponentRepositoryStaticImpl implements ComponentRepositoryStatic{
 	}
 
 	@Override
-	public String[] findAllStatic() { 
+	public String[] findAllStatic() {  
 		return almacenStatico;
 	}
 	
