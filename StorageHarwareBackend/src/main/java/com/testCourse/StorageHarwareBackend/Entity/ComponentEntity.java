@@ -48,6 +48,31 @@ public class ComponentEntity {
 		this.core = core;
 	}
 
+
+	public ComponentEntity(int id, int memo, String name, Date year, CoreComponentEntity core, MakerComponentEntity maker,  TypeComponentEntity type) {
+		// TODO Auto-generated constructor stub
+		super();
+		this.id = id;
+		this.name = name;
+		this.type = type;
+		this.memo = memo;
+		this.year = year;
+		this.maker = maker;
+		this.core = core;
+	}
+/*
+	public ComponentEntity(int id, int memo, String name, Date year, int core, int maker, int type) {
+		// TODO Auto-generated constructor stub
+		super();
+		this.id = id;
+		this.name = name;
+		this.type = type;
+		this.memo = memo;
+		this.year = year;
+		this.maker = maker;
+		this.core = core;
+	}*/
+
 	public int getId() {
 		return id;
 	}
