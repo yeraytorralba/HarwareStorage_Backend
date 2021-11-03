@@ -22,13 +22,15 @@ docker start phpmyadmin<br>
 docker exec -it mysql-db mysql -p<br>
 
 <h4>-Dentro de mysql</h4>
-create databas hardware_bd;<br>
+create database hardware_bd;<br>
 show databases;<br>
 
-<h4>-Acceso por navegador web </h4>
+<h4>-Acceso por navegador web PHPMyadmin </h4>
 http://localhost:8085<br>
 <br>
 Para arrancar proyecto hay que ir a resources>application.properties y cambiar el user y pass de la BD o crear los usuarios y pass que hay reflejan. 
+
+user_java
 
 OJO:el puerto asignado a la hora de crear el sql en docker ser el del application.properties 
 normalmente mysql esta en el 3306 , pero mi contenedor mysql esta en el 33060
