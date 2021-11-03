@@ -14,6 +14,10 @@ docker network create redsql --driver bridge<br>
 docker container create -p 33060:3306 --network redsql -e MYSQL_ROOT_PASSWORD=1234 --name mysql-db mysql<br>
 docker container create -p 8085:80 --network redsql -e PMA_HOST=mysql-db -e PMA_USER=root -e PMA_PASSWORD=1234 --name phpmyadmin phpmyadmin<br>
 
+<h4>-Iniciar containers</h4>
+docker start mysql-db<br>
+docker start phpmyadmin<br>
+
 <h4>-Conectar a BD por consola</h4>
 docker exec -it mysql-db mysql -p<br>
 
