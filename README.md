@@ -21,6 +21,7 @@ db.createUser({user: "user_java", pwd: "user_java", roles : [{role: "readWriteAn
 exit;<br>
 docker exec -it mongodb mongo -u "user_java"<br>
  
+ OJO se a creado en admin como db , para ver si esto es correcto entra root y "use admin" y "show users;"
 
 <h4>-Acceso por navegador web </h4>
 http://localhost:8080/swagger-ui.html<br>
