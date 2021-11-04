@@ -31,3 +31,6 @@ Para arrancar proyecto hay que ir a resources>application.properties y cambiar e
 
 OJO:el puerto asignado a la hora de crear el mogo en docker tiene que ser el del application.properties 
 normalmente mongo esta en el 27017
+
+En el paquete config hay un DbRunInicialiced es un @Configuraion (bean) que al inicio de la application(	@EventListener(ApplicationReadyEvent.class)) hace los create collection y les añade datos.
+
