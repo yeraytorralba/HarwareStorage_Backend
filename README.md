@@ -20,6 +20,7 @@ pass:1234<br>
 db.createUser({user: "user_java", pwd: "user_java", roles : [{role: "readWriteAnyDatabase", db: "admin"}]});<br>
 exit;<br>
 docker exec -it mongodb mongo -u "user_java"<br>
+docker exec -it mongodb mongo -u "user_java" -p "user_java"<br>
  
  OJO se a creado en admin como db , para ver si esto es correcto entra root y "use admin" y "show users;"
 
